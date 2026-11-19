@@ -1,12 +1,15 @@
-// Настройки загрузочного экрана Tot-city
+// Настройки загрузочного экрана TOT-city
 var CONFIG = {
-  // Фоновые фото: положите файлы в public/img/ и впишите имена сюда,
-  // например: ["1.jpg", "2.jpg", "3.jpg"]
-  backgrounds: [],
-
-  // Сколько секунд показывать одно фото
+  backgrounds: [
+    "ring.webp",
+    "bar.webp",
+    "handstand.webp",
+    "watch.webp",
+    "mansion.webp",
+    "riot.webp",
+    "zombies.webp",
+    "bucket.png"
+  ],
   slideSeconds: 7,
-
-  // Запасное значение, если игра не передала макс. игроков
   maxPlayers: 0
 };

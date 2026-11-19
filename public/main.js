@@ -104,7 +104,7 @@
 
   function src(file) {
     if (/^https?:/.test(file)) return file;
-    return "/.netlify/images?url=/img/" + encodeURIComponent(file) + "&w=1920&q=80";
+    return "/img/" + encodeURIComponent(file);
   }
 
   function show(i) {
