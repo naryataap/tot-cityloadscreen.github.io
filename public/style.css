@@ -1,0 +1,155 @@
+/* Стиль C2 (TOT-city). Токены:
+   bg #0f0d14 · bg2 #17141f · bg3 #2a2636 · line #23202c
+   text #ebe8f2 · text2 #a29db0 · text3 #8a8597
+   accent #be8cff · accentFill #7c4dea · good #7fdca0 · warn #e9b04f · bad #e46b6b */
+
+* { margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #0f0d14;
+  color: #ebe8f2;
+  font-family: "Bahnschrift", "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+}
+
+/* ---------- фон ---------- */
+#bg { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #0f0d14; }
+
+.slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  -webkit-transition: opacity 1.6s ease;
+  transition: opacity 1.6s ease;
+}
+.slide.on { opacity: 1; }
+
+/* ровное затемнение фото, без градиента */
+#shade {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 9, 14, .35);
+}
+
+/* ---------- левая колонка ---------- */
+#panel {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 560px;
+  padding: 72px 40px;
+  background: rgba(15, 13, 20, .94);
+}
+
+.kicker,
+.info .k {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8a8597;
+}
+
+.brand { margin-bottom: 48px; }
+
+h1 {
+  margin-top: 12px;
+  font-family: "Bahnschrift SemiBold", "Bahnschrift", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  color: #ebe8f2;
+}
+
+.accent-line {
+  width: 48px;
+  height: 3px;
+  margin-top: 20px;
+  background: #be8cff;
+}
+
+.tagline {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #a29db0;
+}
+
+/* строки информации: прямоугольники, иерархия заливкой */
+.info { list-style: none; }
+.info li {
+  overflow: hidden;
+  min-height: 48px;
+  margin-bottom: 4px;
+  padding: 14px 16px;
+  background: #17141f;
+}
+.info .k { float: left; line-height: 20px; }
+.info .v {
+  float: right;
+  max-width: 300px;
+  text-align: right;
+  font-size: 17px;
+  line-height: 20px;
+  color: #ebe8f2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.info .v.num { color: #be8cff; }
+
+/* ---------- прогресс ---------- */
+.loader {
+  position: absolute;
+  left: 40px; right: 40px; bottom: 72px;
+  padding: 20px 16px 16px;
+  background: #17141f;
+}
+
+.status-row { overflow: hidden; margin-bottom: 12px; }
+#status {
+  float: left;
+  max-width: 380px;
+  font-size: 17px;
+  line-height: 24px;
+  color: #ebe8f2;
+}
+#percent {
+  float: right;
+  font-family: "Bahnschrift SemiBold", "Bahnschrift", "Segoe UI", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #be8cff;
+}
+
+.bar {
+  height: 6px;
+  background: #2a2636;
+  overflow: hidden;
+}
+.fill {
+  width: 0;
+  height: 100%;
+  background: #7c4dea;
+  -webkit-transition: width .4s ease;
+  transition: width .4s ease;
+}
+
+.file {
+  margin-top: 10px;
+  min-height: 18px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8a8597;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+@media (max-height: 700px) {
+  #panel { padding: 40px 40px; }
+  .brand { margin-bottom: 24px; }
+  .loader { bottom: 40px; }
+}

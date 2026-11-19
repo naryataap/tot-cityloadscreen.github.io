@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>TOT-city</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="bg">
+    <div class="slide" id="slideA"></div>
+    <div class="slide" id="slideB"></div>
+  </div>
+  <div id="shade"></div>
+
+  <aside id="panel">
+    <div class="brand">
+      <div class="kicker">Подключение к серверу</div>
+      <h1>TOT-city</h1>
+      <div class="accent-line"></div>
+      <p class="tagline">better then ot-city</p>
+    </div>
+
+    <ul class="info">
+      <li><span class="k">Сервер</span><span class="v" id="server">Tot-city</span></li>
+      <li><span class="k">Карта</span><span class="v" id="map">—</span></li>
+      <li><span class="k">Режим</span><span class="v" id="gamemode">—</span></li>
+      <li><span class="k">Игроки</span><span class="v num" id="players">—</span></li>
+      <li><span class="k">Steam ID</span><span class="v" id="steamid">—</span></li>
+    </ul>
+
+    <div class="loader">
+      <div class="status-row">
+        <span id="status">Подключение…</span>
+        <span id="percent">0%</span>
+      </div>
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <div class="file" id="file">&nbsp;</div>
+    </div>
+  </aside>
+
+  <script src="config.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
